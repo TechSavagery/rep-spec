@@ -1,0 +1,16 @@
+{
+  "name": "rep-spec-app",
+  "version": 2,
+  "build": {
+    "env": {
+      "MONGODB_URI": "mongodb+srv://sandbox-mern:T5jDJbLajFu9yRRt@techsavagery-sandbox.v8zi4.mongodb.net/rep-spec",
+      "CLOUDINARY_URL": "cloudinary://442563951368744:es7Z1ot4tqpdxYMu6UBdiaRH5A4@techsavagery",
+      "DB_NAME": "rep-spec",
+      "SENDGRID_API_KEY": "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",
+      "EMAIL_FROM": "info@techsavagery.net",
+      "WEB_URI": "https://nextjs-mongodb.now.sh",
+      "SESSION_SECRET": "G59ZeXXzOjLE91AHmvhee",
+      "USING_SECRETS": "Consider using Zeit Now Secrets instead."
+    }
+  }
+}
