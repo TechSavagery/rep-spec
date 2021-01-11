@@ -1,24 +1,28 @@
-import nc from 'next-connect';
-import { sendMail } from '@/lib/mail';
-import { all } from '@/middlewares/index';
-import { insertToken } from '@/db/index';
+import nc from "next-connect";
+import { sendMail } from "@/lib/mail";
+import { all } from "@/middlewares/index";
+import { insertToken } from "@/db/index";
 
 const handler = nc();
 
 handler.use(all);
 
 handler.post(async (req, res) => {
-  if (!req.user) { res.json(401).send('you need to be authenticated'); return; }
+  if (!req.user) {
+    res.json(401).send("you need to be authenticated");
+    return;
+  }
 
   const token = await insertToken(req.db, {
     creatorId: req.user._id,
-    type: 'emailVerify',
+    type: "emailVerify",
     expireAt: new Date(Date.now() + 1000 * 60 * 60 * 24),
   });
 
   const msg = {
     to: req.user.email,
     from: process.env.EMAIL_FROM,
+    subject: "Rep Spec Email Verification",
     html: `
       <div>
         <p>Hello, ${req.user.name}</p>
@@ -27,7 +31,7 @@ handler.post(async (req, res) => {
       `,
   };
   await sendMail(msg);
-  res.end('ok');
+  res.end("ok");
 });
 
 export default handler;

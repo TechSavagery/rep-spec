@@ -2,6 +2,8 @@ import React from 'react';
 import { useCurrentUser } from '@/hooks/index';
 import PostEditor from '@/components/post/editor';
 import Posts from '@/components/post/posts';
+import RepSpecs from '@/components/repSpec/repSpecs';
+import RepSpecEditor from '@/components/repSpec/editor';
 
 const IndexPage = () => {
   const [user] = useCurrentUser();
@@ -26,16 +28,13 @@ const IndexPage = () => {
           {user ? user.name : 'stranger'}
           !
         </h2>
-        <p>Have a wonderful day.</p>
+        <p>Let's lift some heavy shit! </p>
+
+        <p>Enter Weight + Reps of any lift attempt to calculate 1RM!</p>
       </div>
       <div>
-        <h3>
-          All posts from the Web
-          {' '}
-          <span role="img" aria-label="Earth">🌎</span>
-        </h3>
-        <PostEditor />
-        <Posts />
+        <RepSpecEditor />
+        <RepSpecs />
       </div>
     </>
   );

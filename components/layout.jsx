@@ -122,7 +122,7 @@ export default function Layout({ children }) {
         `}
       </style>
       <Head>
-        <title>Next.js + MongoDB App</title>
+        <title>Rep Spec</title>
         <meta
           key="viewport"
           name="viewport"
@@ -130,12 +130,12 @@ export default function Layout({ children }) {
         />
         <meta
           name="description"
-          content="nextjs-mongodb-app is a continously developed app built with Next.JS and MongoDB. This project goes further and attempts to integrate top features as seen in real-life apps."
+          content="Rep Spec is a Onme Rep Max Calculator using nextjs-mongodb-passport starter template."
         />
         <meta property="og:title" content="Next.js + MongoDB App" />
         <meta
           property="og:description"
-          content="nextjs-mongodb-app is a continously developed app built with Next.JS and MongoDB. This project goes further and attempts to integrate top features as seen in real-life apps."
+          content="Rep Spec is a Onme Rep Max Calculator using nextjs-mongodb-passport starter template."
         />
         <meta
           property="og:image"
@@ -146,7 +146,7 @@ export default function Layout({ children }) {
         <nav>
           <Link href="/">
             <a>
-              <h1>Next.js + MongoDB App</h1>
+              <h1>Rep Spec</h1>
             </a>
           </Link>
           <div>
@@ -177,28 +177,12 @@ export default function Layout({ children }) {
       <main>{children}</main>
       <footer>
         <p>
-          Made with
-          {' '}
-          <span role="img" aria-label="Love">
-            ❤️
-          </span>
-          ,
-          {' '}
-          <span role="img" aria-label="Fire">
-            🔥
-          </span>
-          , and a keyboard by
-          {' '}
-          <a href="https://hoangvvo.com/">Hoang Vo</a>
-          .
-        </p>
-        <p>
           Source code is on
           {' '}
-          <a href="https://github.com/hoangvvo/nextjs-mongodb-app">Github</a>
+          <a href="https://github.com/TechSavagery/rep-spec">Github</a>
           .
         </p>
       </footer>
     </>
   );
-};
+}
